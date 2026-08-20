@@ -16,6 +16,9 @@ describe('Welcome', () => {
         // Act
         // - Aucun comportement pour ce test
 
+        // - Debug du screen
+        screen.debug(screen.getByRole('heading', { level: 1 }));
+
         // Assert
         expect(screen.getByText(messageWelcome)).toBeInTheDocument();
     });
