@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Counter() {
+export default function Counter({ step = 1 }) {
 
     // Variable "d'état" que React connais 
     // - Conserver la valeur
@@ -9,7 +9,7 @@ export default function Counter() {
 
     const handleIncr = () => {
         // Modification de valeur : Evolution
-        setCount(count => count + 1);
+        setCount(count => count + step);
     };
 
     const handleReset = () => {
@@ -21,7 +21,7 @@ export default function Counter() {
         <>
             <p>{count}</p>
             <div>
-                <button onClick={handleIncr}>+ 1</button>
+                <button onClick={handleIncr}>+ {step}</button>
                 <button onClick={handleReset}>Reset</button>
             </div>
         </>
