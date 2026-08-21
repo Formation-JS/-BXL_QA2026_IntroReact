@@ -20,13 +20,15 @@ describe('Composant Welcome', () => {
         expect(screen.getByText(messageWelcome)).toBeInTheDocument();
     });
 
+    /*
     test('debug welcome message', () => {
         // Arrange
         render(<Welcome firstname='Della' lastname='Duck' />)
 
         // Debug du screen
         screen.debug(screen.getByRole('heading', { level: 1 }));
-    }),
+    });
+    */
 
     test('have a heading level 1 and content "Bienvenue"', () => {
         // Arrange
@@ -37,7 +39,7 @@ describe('Composant Welcome', () => {
 
         // Asset
         expect(title).toHaveTextContent('Bienvenue');
-    }),
+    });
     
     test('have a heading level 1 and check content by regex', () => {
         // Arrange
@@ -48,5 +50,5 @@ describe('Composant Welcome', () => {
 
         // Asset
         expect(title).toHaveTextContent(/Bienvenue [a-z]+ [a-z]+ !/i);
-    })
+    });
 });
